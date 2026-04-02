@@ -1,0 +1,19 @@
+{
+  "name": "tech-diagnostics-registry",
+  "version": "1.0.0",
+  "description": "Облік технічного стану обладнання",
+  "lockfileVersion": 3,
+  "requires": true,
+  "main": "server.js",
+  "packages": {},
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "script": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

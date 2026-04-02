@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Діагностика: Технічний стан</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+        <header>
+            <h1>Журнал діагностики технічного стану</h1>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Внести результати діагностики</h2>
+
+                <form id="diagnostic">
+                    <div class="form-group">
+                        <label for="type">Тип обладнання </label>
+                        <select id="type" name="type" required>
+                            <option value="" selected disabled>Оберіть тип</option>
+                            <option value="transformer">Силовий трансформатор</option>
+                            <option value="breaker">Вимикач</option>
+                            <option value="disconnector">Роз'єднувач</option>
+                            <option value="line">Лінія електропередачі</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equipmentNumber">Інвентарний номер </label>
+                        <input type="text" id="equipmentNumber" name="equipmentNumber" required pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ0-9\-]{3,15}"
+                                title="Формат: від 3 до 15 символів (дозволені літери, цифри та дефіс)"
+                                placeholder="Т-01234">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="substation">Підстанція (об'єкт) </label>
+                        <input type="text" id="substation" name="substation" required minlength="5" maxlength="100"
+                                title="Назва підстанції має містити від 5 до 100 символів"
+                                placeholder="ПС 110/35/10 кВ 'Центральна'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="results">Результати випробувань </label>
+                        <textarea id="results" name="results" required placeholder="Опишіть технічний стан, виявлені дефекти..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                        <input type="checkbox" name="notify" id="notify">
+                        Термінове сповіщення (критичний стан)
+                        </label>
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" class="btn btn-primary">Зберегти запис</button>
+                        <button type="reset" class="btn btn-secondary">Очитити поля</button>
+                    </div>
+                </form>
+                <div id="message" class="message"></div>
+            </section>
+
+            <section class="data-section">
+                <h2>Історія діагностики</h2>
+                <div id="recordsList" class="records-list"></div>
+            </section>
+
+        </main>
+    </div>
+
+	<script src="script.js"></script>
+</body>
+</html>

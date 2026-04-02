@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1775112763812",
+    "type": "breaker",
+    "equipmentNumber": "vzvczvzxcv",
+    "substation": "vzvcxzvcxz",
+    "results": "vcxzvczcxzv",
+    "notify": true,
+    "date": "2026-04-02T06:52:43.812Z"
+  },
+  {
+    "id": "1775114424820",
+    "type": "disconnector",
+    "equipmentNumber": "T-01234",
+    "substation": "ПС 110/15/10",
+    "results": "Взірвалвсь",
+    "notify": false,
+    "date": "2026-04-02T07:20:24.820Z"
+  }
+]
